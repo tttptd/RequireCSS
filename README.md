@@ -4,6 +4,23 @@ A [RequireJS][1] plugin which loads and waits for css files. Uses the standard l
 
 Only caveats __in browsers not supporting the native link load event are that there will be JavaScript parse errors__ (since browsers try to interpret the dummy script tags used for load event detection) and there will be no RequireJS error message when a stylesheet could not be found/loaded. Also beware of IE's 31 style sheets limit (fixed in IE 10).
 
+#Usage:
+
+```js
+define([
+	'jquery', 'underscore', 'backbone',
+	'text!tpl/tpl.html',
+	'css!../../css/styles.css'
+], function($, _, Backbone,
+	Tpl
+) {
+
+[...]
+
+});
+```
+
+
 [1]: http://requirejs.org/
 
 # Compatibility
